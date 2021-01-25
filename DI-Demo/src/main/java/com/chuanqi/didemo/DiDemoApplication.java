@@ -1,9 +1,6 @@
 package com.chuanqi.didemo;
 
-import com.chuanqi.didemo.controllers.ConstructorInjController;
-import com.chuanqi.didemo.controllers.HelloController;
-import com.chuanqi.didemo.controllers.PropertyInjController;
-import com.chuanqi.didemo.controllers.SetterInjController;
+import com.chuanqi.didemo.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -27,6 +24,14 @@ public class DiDemoApplication {
         System.out.println("----- constructor injected -----");
         ConstructorInjController constructorInjController = (ConstructorInjController) ctx.getBean("constructorInjController");
         System.out.println(constructorInjController.greeting());
+
+        System.out.println("----- primary controller -----");
+        PrimaryController primaryController = (PrimaryController) ctx.getBean("primaryController");
+        System.out.println(primaryController.greeting());
+
+        System.out.println("----- profile controller -----");
+        I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+        System.out.println(i18NController.greeting());
     }
 
 }

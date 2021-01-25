@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class PropertyInjController {
+public class I18NController {
+    private final MessageService messageService;
 
-    @Qualifier("propertyMessageService")
-    @Autowired
-    private MessageService msgService;
+    public I18NController(@Qualifier("i18nService") MessageService messageService) {
+        this.messageService = messageService;
+    }
 
     public String greeting() {
-        return msgService.getMessage();
+        return messageService.getMessage();
     }
 }
