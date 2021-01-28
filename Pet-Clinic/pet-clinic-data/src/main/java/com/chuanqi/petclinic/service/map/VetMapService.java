@@ -10,26 +10,26 @@ import java.util.Set;
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
-        return null;
+        return super.findAll();
     }
 
     @Override
-    public Vet findById(Long aLong) {
-        return null;
+    public Vet findById(Long id) {
+        return super.findById(id);
     }
 
     @Override
     public Vet save(Vet object) {
-        return null;
+        return super.save(object);
     }
 
     @Override
     public void delete(Vet object) {
-
+        super.delete(object);
     }
 
     @Override
-    public void deleteById(Long aLong) {
-
+    public void deleteById(Long id) {
+        super.deleteById(id);
     }
 }

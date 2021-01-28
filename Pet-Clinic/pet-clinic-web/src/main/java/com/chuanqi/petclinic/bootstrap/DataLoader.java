@@ -4,7 +4,6 @@ import com.chuanqi.petclinic.model.Owner;
 import com.chuanqi.petclinic.model.Vet;
 import com.chuanqi.petclinic.service.OwnerService;
 import com.chuanqi.petclinic.service.VetService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
